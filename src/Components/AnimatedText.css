@@ -1,0 +1,55 @@
+.animated-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f9fa; /* Light background */
+    font-family: "Playfair Display", serif;
+  }
+  
+  .animated-text {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ff0000;
+    animation: fadeIn 2s ease-in-out, bounce 1s 2s infinite;
+    text-align: center;
+    font-family: sans-serif;
+  }
+  
+  .animated-text span {
+    color: #000;
+    animation: colorChange 2s infinite alternate;
+  }
+  
+  /* Animation for fading in */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Animation for bouncing */
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  /* Animation for color change */
+  @keyframes colorChange {
+    from {
+      color: #ff0000;
+    }
+    to {
+      color: #000000;
+    }
+  }
+  
